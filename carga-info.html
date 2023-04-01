@@ -360,60 +360,145 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Ingrese Anamnesis</h1>
-                    <form action="/action_page.php">
-                      <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="name" class="form-control" id="nombre">
-                      </div>
-                      <div class="form-group">
-                        <label for="rut">RUT/DI</label>
-                        <input type="id" class="form-control" id="rut">
-                      </div>
-                      <div class="form-group">
-                        <label for="motivo">Ingrese motivo de consulta: </label>
-                        <input type="motivo" class="form-control" id="motivo">
-                      </div>
-                      <div> Ingrese patologías de base:</div><br>
+                    <h1 class="h3 mb-4 text-gray-800">Carga de Información Clínica</h1>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAnamnesis">
+                       Anamnesis
+                      </button>
+
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExamenes">
+                        Exámenes
+                       </button>
                     
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Diabetes Mellitus</label>
+                       <div class="modal fade" id="modalExamenes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Exámenes</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                      <label for="nombre">Nombre</label>
+                                      <input type="name" class="form-control" id="nombre">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="rut">RUT/DI</label>
+                                      <input type="id" class="form-control" id="rut">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="motivo">Ingrese Médico derivador: </label>
+                                      <input type="motivo" class="form-control" id="motivo">
+                                    </div>
+                                    <h3 > Valores Hemograma:</h3><br>
+                                                       
+                                    <div class="form-group">
+                                      <label for="hematocrito">Recuento de glóbulos rojos (células/l) </label>
+                                      <input type="text" class="form-control" id="recuento">
+                                      
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="hemoglobina">Hemoglobina (gramos/dl)</label>
+                                      <input type="text" class="form-control" id="hemoglobina">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="hematocrito">Hematocrito (%)</label>
+                                      <input type="text" class="form-control" id="hematocrito">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="blancos">Recuento de Glóbulos Blancos (células/l)</label>
+                                      <input type="text" class="form-control" id="blancos">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="plaquetas">Recuento de Plaquetas (células/l) (%)</label>
+                                      <input type="text" class="form-control" id="plaquetas">
+                                    </div>
+                                  
+                                  </form> 
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Ingresar</button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Hipertensión Arterial</label>
+                      <!-- Modal -->
+                      <div class="modal fade" id="modalAnamnesis" tabindex="-1" role="dialog" aria-labelledby="modalAnamnesis" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalCenterTitle">Anamnesis</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                      <label for="nombre">Nombre</label>
+                                      <input type="name" class="form-control" id="nombre">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="rut">RUT/DI</label>
+                                      <input type="id" class="form-control" id="rut">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="motivo">Ingrese motivo de consulta: </label>
+                                      <input type="motivo" class="form-control" id="motivo">
+                                    </div>
+                                    <div> Ingrese patologías de base:</div><br>
+                                  
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Diabetes Mellitus</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Hipertensión Arterial</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Dislipidemia</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Cáncer</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Alcoholismo</label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Consumo de drogas</label>
+                                    <div class="checkbox">
+                                      <label><input type="checkbox"> Patologías de Salud Mental</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                      <label for="motivo">Fármacos: </label>
+                                      <input type="text" class="form-control" id="motivo">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="diagnostico">Otras Enfermedades: </label>
+                                      <input type="text" class="form-control" id="diagnóstico">
+                                    </div>
+                                   
+                                   
+                                  
+                                  </form> 
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Ingresar</button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Dislipidemia</label>
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Cáncer</label>
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Alcoholismo</label>
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Consumo de drogas</label>
-                      <div class="checkbox">
-                        <label><input type="checkbox"> Patologías de Salud Mental</label>
-                      </div>
+
                       
-                      <div class="form-group">
-                        <label for="motivo">Fármacos: </label>
-                        <input type="text" class="form-control" id="motivo">
-                      </div>
-                      <div class="form-group">
-                        <label for="diagnostico">Diagnóstico: </label>
-                        <input type="text" class="form-control" id="diagnóstico">
-                      </div>
-                      <div class="form-group">
-                        <label for="tratamiento">Tratamiento: </label>
-                        <input type="text" class="form-control" id="tratamiento">
-                      </div>
-                      <button type="submit" class="btn btn-default">Ingresar</button>
-                    
-                    </form> 
-                </div>
-                <!-- /.container-fluid -->
+                      
+                   
+
+                      
+                   
 
             </div>
             <!-- End of Main Content -->
