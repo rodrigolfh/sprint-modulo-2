@@ -37,21 +37,19 @@
                 <!-- Topbar Search -->
                 <!-- Topbar Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                                Ingreso SaludAPP Clínico<span class="caret"></span>
-                            </a>
+                   
     
                         <div class="dropdown-menu" id="formLogin">
                             <div class="row">
                                 <div class="container-fluid">
-                                    <form class="">
+                                    <form class="form-signin">
                                         <div class="form-group">
                                             <label class="">Usuario</label>
-                                            <input class="form-control" name="username" id="username" type="text">
+                                            <input class="form-control " name="username" id="user" type="text">
                                         </div>
                                         <div class="form-group">
                                             <label class="">Contraseña</label>
-                                            <input class="form-control" name="password" id="password" type="password">
+                                            <input class="form-control" name="password" id="passw" type="password">
                                             <br class="">
                                         </div>
                                         <button type="submit" id="btnLogin" class="btn btn-success btn-sm"> <a href="ppl_usuario_medico.html"> Ingresar</a></button>
@@ -74,10 +72,10 @@
 <div class="col-xl-6 col-lg-10 col-md-8">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
+                    <div class="card-body p-0 ">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-lg-block bg-login-image"> <img src="img/pexels-photo-1456951.jpg" alt=""></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -99,18 +97,14 @@
                                                 <label class="custom-control-label" for="customCheck">Recuérdame</label>
                                             </div>
                                         </div>
-                                        <a href="perfil-cuenta-personal.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
-
-                                        <p>(use "Login" para probar el perfil de cuenta personal)</p>
+                                        <a  href="perfil-cuenta-personal.html" class="btn btn-lg btn-primary btn-user btn-block"
+                                        >Acceso Pacientes</a>
+                                        
                                         <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login con Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login con Facebook
-                                        </a>
+                                        <a href="ppl_usuario_medico.html" class="btn btn-lg btn-success btn-user btn-block"
+                                        >Acceso Personal Médico</a>
+                                        
+                                       
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -216,6 +210,23 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+    <script>
+        const form = document.querySelector('.form-signin');
+//usar form con clase form-singin y boton con type submit
+form.addEventListener('submit', (event) => {
+event.preventDefault(); // honestamente copiado desde un demo maqueta, pero no sé porqué necesito esto.
+const user = form.querySelector('#user').value;
+const pass = form.querySelector('#passw').value;
+const userHardcodeado = 'rodrigo';
+const passHardcodeado = '1234';
+if (user === userHardcodeado && pass === passHardcodeado) {
+window.location.replace("perfil-cuenta-personal");
+} else {
+alert('credenciales invalidas');
+}
+
+});
+    </script>
 
 </body>
 
