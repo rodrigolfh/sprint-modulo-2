@@ -12091,7 +12091,7 @@ a:focus {
 }
 
 .bg-login-image {
-    background: url('img/pexels-photo-1456951.jpeg')!important;
+    background: url('img/pexels-photo-1456951.jpeg') !important;
     background-position: center;
     background-size: cover;
 }
